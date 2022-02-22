@@ -63,8 +63,7 @@ export default function Nav() {
                             alt="Daniel Kilcullen"
                             src={avi}
                             sx={{ width: 150, height: 150, margin: 2 }}
-
-                            />
+                        />
                     </div>
                     <div>
                         <Typography variant="h5" noWrap component="div"
@@ -151,23 +150,24 @@ export default function Nav() {
         <AppBar
             position="fixed"
             sx={{
-            width: { sm: `calc(100% - ${drawerWidth}px)` },
-            ml: { sm: `${drawerWidth}px` },
-            backgroundColor: theme.palette.background.paper
+                width: { sm: `calc(100% - ${drawerWidth}px)` },
+                ml: { sm: `${drawerWidth}px` },
+                backgroundColor: theme.palette.background.paper
             }}>
-            <Toolbar>
-            <IconButton
-                // color="inherit"
-                aria-label="open drawer"
-                edge="start"
-                onClick={handleDrawerToggle}
-                sx={{ mr: 2, display: { sm: 'none' }, color: theme.palette.text.base }}
+            <Toolbar sx= {{ display: {xs: "flex", sm: 'none'} }}> 
+                <IconButton
+                    aria-label="open drawer"
+                    edge="start"
+                    onClick={handleDrawerToggle}
+                    sx={{ mr: 2, display: { sm: 'none' }, color: theme.palette.text.base }}
+                    >
+                    <MenuIcon />
+                </IconButton>
+                <Typography variant="h6" noWrap component="div"
+                    sx={{color: theme.palette.text.base }}
                 >
-                <MenuIcon />
-            </IconButton>
-            <Typography variant="h6" noWrap component="div">
-                Daniel Kilcullen
-            </Typography>
+                    Daniel Kilcullen
+                </Typography>
             </Toolbar>
         </AppBar>
 
@@ -177,28 +177,28 @@ export default function Nav() {
             aria-label="menu headings"
         >
             <Drawer
-            container={container}
-            variant="temporary"
-            open={mobileOpen}
-            onClose={handleDrawerToggle}
-            ModalProps={{
-                keepMounted: true, // Better open performance on mobile.
-            }}
-            sx={{
-                display: { xs: 'block', sm: 'none' },
-                '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
-            }}
+                container={container}
+                variant="temporary"
+                open={mobileOpen}
+                onClose={handleDrawerToggle}
+                ModalProps={{
+                    keepMounted: true, // Better open performance on mobile.
+                }}
+                sx={{
+                    display: { xs: 'block', sm: 'none' },
+                    '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+                }}
             >
             {drawer}
             </Drawer>
 
             <Drawer
-            variant="permanent"
-            sx={{
-                display: { xs: 'none', sm: 'block' },
-                '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
-            }}
-            open
+                variant="permanent"
+                sx={{
+                    display: { xs: 'none', sm: 'block' },
+                    '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+                }}
+                open
             >
             {drawer}
             </Drawer>

@@ -10,8 +10,8 @@ export default function Bio() {
             justifyContent: 'center',
             alignItems: 'center',
             flexGrow: 1,
-            width: { sm: '100%' },
-            height: { sm: '100vh'},
+            width: { xs: '100%' },
+            height: { xs: '100vh'},
             m: 0,
         }}>
             <Toolbar />
