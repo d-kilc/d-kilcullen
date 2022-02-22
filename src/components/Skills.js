@@ -29,8 +29,8 @@ export default function Skills() {
             >
                 <Typography variant="h4" sx= {{ margin: '0 0 0 25px' }}>Skills</Typography>
                 <Typography variant="h5" m={1} sx= {{ margin: '0 0 0 30px' }}>Technical</Typography>
-                <Grid container spacing={1} m={1} sx= {{ marginLeft: {xs: '20%', md: '20px'} }}>
-                    <Grid item xs={12} md={6} lg={4} display="flex">
+                <Grid container spacing={1} m={1} sx= {{ paddingLeft: {xs: '20%',md:0}, marginLeft: {md: '20px'} }}>
+                    <Grid item xs={12} md={6} lg={4} display="flex" >
                         <Box margin="auto 0">
                             <JavascriptIcon sx={{border: '1px solid', borderRadius: '50%', padding: '5px', fontSize: {xs: 40, md: 60}}}/>
                         </Box>
@@ -92,7 +92,7 @@ export default function Skills() {
                     </Grid>
                 </Grid>
                 <Typography variant="h5" m={1} sx= {{ margin: '0 0 0 25px' }}>Business</Typography>
-                <Grid container spacing={1} m={1} sx={{ marginLeft: {xs: '20%', md: '20px'} }}>
+                <Grid container spacing={1} m={1} sx={{ paddingLeft: {xs: '20%',md: 0}, marginLeft: {md: '20px'} }}>
                     <Grid item xs={12} md={6} lg={4} display="flex">
                         <Box margin="auto 0">
                             <CreateIcon sx={{border: '1px solid', borderRadius: '50%', padding: '5px', fontSize: {xs: 40, md: 60}}}/>
