@@ -14,14 +14,16 @@ import AutoGraphIcon from '@mui/icons-material/AutoGraph'
 import theme from '../theme/theme'
 import { ThemeProvider } from '@mui/system'
 
-
 export default function Skills() {
     return (
         <ThemeProvider theme={theme}>
             {/* <div style={{ width: '100%', height: "100vh", margin: '20px 20px' }}> */}
             <Box 
                 display="flex"  flexDirection="column" width='100%'
-                sx= {{ height: { xs: '100vh', sm: '100vh'} }} 
+                sx= {{ 
+                    height: { xs: '100vh', sm: '100vh'},
+                    color: theme.palette.text.primary,
+                }} 
                 // padding="10px 10px"
                 // bgcolor="lightgreen"
                 // alignItems="center"
@@ -31,23 +33,13 @@ export default function Skills() {
                 <Typography variant="h5" m={1} sx= {{ margin: '0 0 0 30px' }}>Technical</Typography>
                 <Grid container spacing={1} m={1} sx= {{ paddingLeft: {xs: '20%',md:0}, marginLeft: {md: '20px'} }}>
                     <Grid item xs={12} md={6} lg={4} display="flex" >
-                        <Box margin="auto 0">
+                        <Box margin="auto 0" >
                             <JavascriptIcon sx={{border: '1px solid', borderRadius: '50%', padding: '5px', fontSize: {xs: 40, md: 60}}}/>
                         </Box>
                         <Box margin="auto auto auto 10px">
                             <Typography variant="button">JavaScript</Typography>
                             <br/>
                             <Typography variant="caption">React, vanilla JS</Typography>
-                        </Box>
-                    </Grid>
-                    <Grid item xs={12} md={6} lg={4} display="flex">
-                        <Box margin="auto 0">
-                            <DiamondIcon sx={{border: '1px solid', borderRadius: '50%', padding: '5px', fontSize: {xs: 40, md: 60}}}/>
-                        </Box>
-                        <Box margin="auto auto auto 10px">
-                            <Typography variant="button">Ruby</Typography>
-                            <br/>
-                            <Typography variant="caption">Rails</Typography>
                         </Box>
                     </Grid>
                     <Grid item xs={12} md={6} lg={4} display="flex">
@@ -62,6 +54,16 @@ export default function Skills() {
                     </Grid>
                     <Grid item xs={12} md={6} lg={4} display="flex">
                         <Box margin="auto 0">
+                            <DiamondIcon sx={{border: '1px solid', borderRadius: '50%', padding: '5px', fontSize: {xs: 40, md: 60}}}/>
+                        </Box>
+                        <Box margin="auto auto auto 10px">
+                            <Typography variant="button">Ruby</Typography>
+                            <br/>
+                            <Typography variant="caption">Rails</Typography>
+                        </Box>
+                    </Grid>
+                    <Grid item xs={12} md={6} lg={4} display="flex">
+                        <Box margin="auto 0">
                             <StorageIcon sx={{border: '1px solid', borderRadius: '50%', padding: '5px', fontSize: {xs: 40, md: 60}}}/>
                         </Box>
                         <Box margin="auto auto auto 10px">
@@ -72,22 +74,22 @@ export default function Skills() {
                     </Grid>
                     <Grid item xs={12} md={6} lg={4} display="flex">
                         <Box margin="auto 0">
-                            <HubIcon sx={{border: '1px solid', borderRadius: '50%', padding: '5px', fontSize: {xs: 40, md: 60}}}/>
-                        </Box>
-                        <Box margin="auto auto auto 10px">
-                            <Typography variant="button">Graph DB</Typography>
-                            <br/>
-                            <Typography variant="caption">Neo4j</Typography>
-                        </Box>
-                    </Grid>
-                    <Grid item xs={12} md={6} lg={4} display="flex">
-                        <Box margin="auto 0">
                             <CloudIcon sx={{border: '1px solid', borderRadius: '50%', padding: '5px', fontSize: {xs: 40, md: 60}}}/>
                         </Box>
                         <Box margin="auto auto auto 10px">
                             <Typography variant="button">AWS, Google Cloud</Typography>
                             <br/>
                             <Typography variant="caption">AWS Certified Cloud Practitioner</Typography>
+                        </Box>
+                    </Grid>
+                    <Grid item xs={12} md={6} lg={4} display="flex">
+                        <Box margin="auto 0">
+                            <HubIcon sx={{border: '1px solid', borderRadius: '50%', padding: '5px', fontSize: {xs: 40, md: 60}}}/>
+                        </Box>
+                        <Box margin="auto auto auto 10px">
+                            <Typography variant="button">Graph DB</Typography>
+                            <br/>
+                            <Typography variant="caption">Neo4j</Typography>
                         </Box>
                     </Grid>
                 </Grid>

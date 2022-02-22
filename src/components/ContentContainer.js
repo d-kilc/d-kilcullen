@@ -8,6 +8,7 @@ import Skills from './Skills'
 import Drawer from '@mui/material/Drawer'
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
+import Link from '@mui/material/Link';
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
@@ -93,18 +94,22 @@ export default function Nav() {
                     </ListItemIcon>
                 <ListItemText primary={'Skills'} />
                 </ListItem>
-                <ListItem button key={'Blog'}>
-                    <ListItemIcon>
-                        <CreateIcon /> 
-                    </ListItemIcon>
-                <ListItemText primary={'Blog'} />
-                </ListItem>
-                <ListItem button key={'My Resume'}>
-                    <ListItemIcon>
-                        <ContactPageIcon /> 
-                    </ListItemIcon>
-                <ListItemText primary={'My Resume'} />
-                </ListItem>
+                <Link href="https://medium.com/@d-kilc" underline="none" sx= {{color: theme.palette.text.primary}}>
+                    <ListItem button key={'Blog'}>
+                        <ListItemIcon>
+                            <CreateIcon /> 
+                        </ListItemIcon>
+                        <ListItemText primary={'Blog'} />
+                    </ListItem>
+                </Link>
+                <Link href="../assets/Daniel_Kilcullen_Resume.pdf" underline="none" sx= {{color: theme.palette.text.primary}}>
+                    <ListItem button key={'My Resume'}>
+                        <ListItemIcon>
+                            <ContactPageIcon /> 
+                        </ListItemIcon>
+                    <ListItemText primary={'My Resume'} />
+                    </ListItem>
+                </Link>
             </List>
             <Divider />
             <List>
@@ -117,24 +122,30 @@ export default function Nav() {
                 </ListItemButton>
                 <Collapse in={sectionOpen} timeout="auto" unmountOnExit>
                     <List component="div" disablePadding>
-                        <ListItemButton sx={{ pl: 4 }}>
-                            <ListItemIcon>
-                                <LinkedInIcon />
-                            </ListItemIcon>
-                            <ListItemText primary="LinkedIn" />
-                        </ListItemButton>
-                        <ListItemButton sx={{ pl: 4 }}>
-                            <ListItemIcon>
-                                <GitHubIcon />
-                            </ListItemIcon>
-                            <ListItemText primary="GitHub" />
-                        </ListItemButton>
-                        <ListItemButton sx={{ pl: 4 }}>
-                            <ListItemIcon>
-                                <EmailIcon />
-                            </ListItemIcon>
-                            <ListItemText primary="Email" />
-                        </ListItemButton>
+                        <Link href="https://www.linkedin.com/in/danielkilcullen/" underline="none" sx= {{color: theme.palette.text.primary}}>
+                            <ListItemButton sx={{ pl: 4 }}>
+                                <ListItemIcon>
+                                    <LinkedInIcon />
+                                </ListItemIcon>
+                                <ListItemText primary="LinkedIn" />
+                            </ListItemButton>
+                        </Link>
+                        <Link href="https://github.com/d-kilc" underline="none" sx= {{color: theme.palette.text.primary}}>
+                            <ListItemButton sx={{ pl: 4 }}>
+                                <ListItemIcon>
+                                    <GitHubIcon />
+                                </ListItemIcon>
+                                <ListItemText primary="GitHub" />
+                            </ListItemButton>
+                        </Link>
+                        <Link href="mailto:dkilcullen25@gmail.com" underline="none" sx= {{color: theme.palette.text.primary}}>
+                            <ListItemButton sx={{ pl: 4 }}>
+                                <ListItemIcon>
+                                    <EmailIcon />
+                                </ListItemIcon>
+                                <ListItemText primary="Email" />
+                            </ListItemButton>
+                        </Link>
                     </List>
                 </Collapse>
             </List>
@@ -154,17 +165,16 @@ export default function Nav() {
                 ml: { sm: `${drawerWidth}px` },
                 backgroundColor: theme.palette.background.paper
             }}>
-            <Toolbar sx= {{ display: {xs: "flex", sm: 'none'} }}> 
+            <Toolbar sx= {{ display: {xs: "flex", sm: 'none', color: theme.palette.text.primary }}}> 
                 <IconButton
                     aria-label="open drawer"
                     edge="start"
                     onClick={handleDrawerToggle}
-                    sx={{ mr: 2, display: { sm: 'none' }, color: theme.palette.text.base }}
+                    sx={{ mr: 2, display: { sm: 'none' } }}
                     >
                     <MenuIcon />
                 </IconButton>
-                <Typography variant="h6" noWrap component="div"
-                    sx={{color: theme.palette.text.base }}
+                <Typography variant="h5" noWrap component="div"
                 >
                     Daniel Kilcullen
                 </Typography>
@@ -212,7 +222,11 @@ export default function Nav() {
             
         }} >
             <Bio />
+            <Divider />
+
             <Projects />
+            <Divider />
+
             <Skills />
         </Box>
 
