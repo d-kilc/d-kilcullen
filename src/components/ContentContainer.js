@@ -39,7 +39,7 @@ import Typography from '@mui/material/Typography';
 import { useState } from 'react'
 import { ThemeProvider, createTheme } from '@mui/system';
 
-const drawerWidth = 310
+const drawerWidth = 320
 
 export default function Nav() {
     const [mobileOpen, setMobileOpen] = useState(false)

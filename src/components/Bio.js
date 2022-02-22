@@ -2,8 +2,6 @@ import Box from '@mui/material/Box'
 import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
 
-const drawerWidth = 310
-
 export default function Bio() {
     return (
         <Box component="main" sx={{ 
