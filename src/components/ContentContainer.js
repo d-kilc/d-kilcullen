@@ -38,6 +38,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 
 import { useState } from 'react'
+import { BrowserRouter as Router, Link as RouterLink, Routes } from 'react-router-dom'
 import { ThemeProvider, createTheme } from '@mui/system';
 
 const drawerWidth = 320
@@ -76,24 +77,30 @@ export default function Nav() {
             </Toolbar>
             <Divider />
             <List>
-                <ListItem button key={'Bio'}>
-                    <ListItemIcon>
-                        <PersonIcon /> 
-                    </ListItemIcon>
-                <ListItemText primary={'Bio'} />
-                </ListItem>
-                <ListItem button key={'Projects'}>
-                    <ListItemIcon>
-                        <CodeIcon /> 
-                    </ListItemIcon>
-                <ListItemText primary={'Projects'} />
-                </ListItem>
-                <ListItem button key={'Skills'}>
-                    <ListItemIcon>
-                        <ThumbUpAltIcon /> 
-                    </ListItemIcon>
-                <ListItemText primary={'Skills'} />
-                </ListItem>
+                <Link href="/" underline="none" sx= {{color: theme.palette.text.primary}}>
+                    <ListItem button key={'Bio'}>
+                        <ListItemIcon>
+                            <PersonIcon /> 
+                        </ListItemIcon>
+                    <ListItemText primary={'Bio'} />
+                    </ListItem>
+                </Link>
+                <Link href="/#projects" underline="none" sx= {{color: theme.palette.text.primary}}>
+                    <ListItem button key={'Projects'}>
+                        <ListItemIcon>
+                            <CodeIcon /> 
+                        </ListItemIcon>
+                    <ListItemText primary={'Projects'} />
+                    </ListItem>
+                </Link>
+                <Link href="/#skills" underline="none" sx= {{color: theme.palette.text.primary}}>
+                    <ListItem button key={'Skills'}>
+                        <ListItemIcon>
+                            <ThumbUpAltIcon /> 
+                        </ListItemIcon>
+                    <ListItemText primary={'Skills'} />
+                    </ListItem>
+                </Link>
                 <Link href="https://medium.com/@d-kilc" underline="none" sx= {{color: theme.palette.text.primary}}>
                     <ListItem button key={'Blog'}>
                         <ListItemIcon>
@@ -155,6 +162,7 @@ export default function Nav() {
     const container = window !== undefined ? () => window.document.body : undefined;
 
     return (
+    <Router>
     <ThemeProvider theme={theme} >
         <Box sx={{ display: 'flex' }}>
 
@@ -227,10 +235,11 @@ export default function Nav() {
             <Projects />
             <Divider />
 
-            <Skills />
+            <Skills/>
         </Box>
 
         </Box>
     </ThemeProvider>
+    </Router>
     )
 }
