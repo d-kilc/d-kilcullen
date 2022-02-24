@@ -11,10 +11,10 @@ import Typography from '@mui/material/Typography';
 export default function ProjectCard({project}) {
     
     return(
-        <Card sx={{ width: '400px', maxWidth: {xs: '75%'}, boxShadow: 3, mb: {xs: '15px', lg: '0px'} }}>
+        <Card sx={{ maxWidth: {xs: '80%', lg: '400px'}, boxShadow: 3, mb: {xs: '15px', lg: '0px'} }}>
             <CardMedia
                 sx= {{
-                    maxHeight: {xs: '120px', sm: '190px', md: '240px'},
+                    maxHeight: {xs: '100px', sm: '150px', md: '220px'},
                 }}
                 component="img"
                 src={project.image}
