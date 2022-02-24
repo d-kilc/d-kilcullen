@@ -6,12 +6,10 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
-
-
 export default function ProjectCard({project}) {
     
     return(
-        <Card sx={{ maxWidth: {xs: '80%', lg: '400px'}, boxShadow: 3, mb: {xs: '15px', lg: '0px'} }}>
+        <Card sx={{ maxWidth: {xs: '80%', lg: '420px'}, boxShadow: 3, mb: {xs: '15px', lg: '0px'} }}>
             <CardMedia
                 sx= {{
                     maxHeight: {xs: '100px', sm: '150px', md: '220px'},
