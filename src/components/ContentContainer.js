@@ -177,7 +177,7 @@ export default function Nav() {
                     edge="start"
                     onClick={handleDrawerToggle}
                     sx={{ mr: 2, display: { sm: 'none' } }}
-                    >
+                >
                     <MenuIcon />
                 </IconButton>
                 <Typography variant="h5" noWrap component="div"

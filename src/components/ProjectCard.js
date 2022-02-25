@@ -12,7 +12,7 @@ export default function ProjectCard({project}) {
         <Card sx={{ maxWidth: {xs: '80%', lg: '420px'}, boxShadow: 3, mb: {xs: '15px', lg: '0px'} }}>
             <CardMedia
                 sx= {{
-                    maxHeight: {xs: '100px', sm: '150px', md: '220px'},
+                    maxHeight: {xs: '100px', sm: '150px', md: '200px'},
                 }}
                 component="img"
                 src={project.image}
