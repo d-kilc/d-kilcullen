@@ -75,7 +75,7 @@ export default function Nav() {
             </Toolbar>
             <Divider />
             <List>
-                <Link href="/" underline="none" sx= {{color: theme.palette.text.primary}}>
+                <Link href="/" underline="none" onClick={handleDrawerToggle} sx= {{color: theme.palette.text.primary}}>
                     <ListItem button key={'Bio'}>
                         <ListItemIcon>
                             <PersonIcon /> 
@@ -83,7 +83,7 @@ export default function Nav() {
                     <ListItemText primary={'Bio'} />
                     </ListItem>
                 </Link>
-                <Link href="/#projects" underline="none" sx= {{color: theme.palette.text.primary}}>
+                <Link href="/#projects" underline="none" onClick={handleDrawerToggle} sx= {{color: theme.palette.text.primary}}>
                     <ListItem button key={'Projects'}>
                         <ListItemIcon>
                             <CodeIcon /> 
@@ -91,7 +91,7 @@ export default function Nav() {
                     <ListItemText primary={'Projects'} />
                     </ListItem>
                 </Link>
-                <Link href="/#skills" underline="none" sx= {{color: theme.palette.text.primary}}>
+                <Link href="/#skills" underline="none" onClick={handleDrawerToggle} sx= {{color: theme.palette.text.primary}}>
                     <ListItem button key={'Skills'}>
                         <ListItemIcon>
                             <ThumbUpAltIcon /> 
@@ -99,7 +99,7 @@ export default function Nav() {
                     <ListItemText primary={'Skills'} />
                     </ListItem>
                 </Link>
-                <Link href="https://medium.com/@d-kilc" underline="none" sx= {{color: theme.palette.text.primary}}>
+                <Link href="https://medium.com/@d-kilc" onClick={handleDrawerToggle} underline="none" sx= {{color: theme.palette.text.primary}}>
                     <ListItem button key={'Blog'}>
                         <ListItemIcon>
                             <CreateIcon /> 
@@ -107,7 +107,7 @@ export default function Nav() {
                         <ListItemText primary={'Blog'} />
                     </ListItem>
                 </Link>
-                <Link href="../assets/Daniel_Kilcullen_Resume.pdf" underline="none" sx= {{color: theme.palette.text.primary}}>
+                <Link href="../assets/Daniel_Kilcullen_Resume.pdf" onClick={handleDrawerToggle} underline="none" sx= {{color: theme.palette.text.primary}}>
                     <ListItem button key={'My Resume'}>
                         <ListItemIcon>
                             <ContactPageIcon /> 
@@ -127,7 +127,7 @@ export default function Nav() {
                 </ListItemButton>
                 <Collapse in={sectionOpen} timeout="auto" unmountOnExit>
                     <List component="div" disablePadding>
-                        <Link href="https://www.linkedin.com/in/danielkilcullen/" underline="none" sx= {{color: theme.palette.text.primary}}>
+                        <Link href="https://www.linkedin.com/in/danielkilcullen/" onClick={handleDrawerToggle} underline="none" sx= {{color: theme.palette.text.primary}}>
                             <ListItemButton sx={{ pl: 4 }}>
                                 <ListItemIcon>
                                     <LinkedInIcon />
@@ -135,7 +135,7 @@ export default function Nav() {
                                 <ListItemText primary="LinkedIn" />
                             </ListItemButton>
                         </Link>
-                        <Link href="https://github.com/d-kilc" underline="none" sx= {{color: theme.palette.text.primary}}>
+                        <Link href="https://github.com/d-kilc" onClick={handleDrawerToggle} underline="none" sx= {{color: theme.palette.text.primary}}>
                             <ListItemButton sx={{ pl: 4 }}>
                                 <ListItemIcon>
                                     <GitHubIcon />
@@ -143,7 +143,7 @@ export default function Nav() {
                                 <ListItemText primary="GitHub" />
                             </ListItemButton>
                         </Link>
-                        <Link href="mailto:dkilcullen25@gmail.com" underline="none" sx= {{color: theme.palette.text.primary}}>
+                        <Link href="mailto:dkilcullen25@gmail.com" onClick={handleDrawerToggle} underline="none" sx= {{color: theme.palette.text.primary}}>
                             <ListItemButton sx={{ pl: 4 }}>
                                 <ListItemIcon>
                                     <EmailIcon />
