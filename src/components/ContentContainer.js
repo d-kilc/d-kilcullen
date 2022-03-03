@@ -1,4 +1,5 @@
 import avi from '../assets/dk-avi-zoomed.jpeg'
+import resume from '../assets/Daniel_Kilcullen_Resume_20220303.pdf'
 import theme from '../theme/theme'
 
 import Bio from './Bio'
@@ -107,7 +108,7 @@ export default function Nav() {
                         <ListItemText primary={'Blog'} />
                     </ListItem>
                 </Link>
-                <Link href="/src/public/assets/Daniel_Kilcullen_Resume_20220303.pdf" onClick={handleDrawerToggle} underline="none" sx= {{color: theme.palette.text.primary}}>
+                <Link href={resume} onClick={handleDrawerToggle} underline="none" sx= {{color: theme.palette.text.primary}}>
                     <ListItem button key={'My Resume'}>
                         <ListItemIcon>
                             <ContactPageIcon /> 
